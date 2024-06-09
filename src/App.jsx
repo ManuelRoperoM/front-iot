@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './App.css'
 import { io } from 'socket.io-client'
 
-const socket = io('http://192.168.1.15:8081')
+const socket = io('https://lifae-iot.onrender.com')
 function App () {
   const [data, setData] = useState(null)
   const [timeoutId, setTimeoutId] = useState(null)
