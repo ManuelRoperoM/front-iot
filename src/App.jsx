@@ -2,14 +2,12 @@ import React, { useState, useEffect } from 'react'
 import './App.css'
 import { io } from 'socket.io-client'
 
-// const socket = io('http://192.168.1.15:8081') 3001
-const socket = io('http://192.168.1.15:3001')
+const socket = io('http://192.168.1.15:8081')
 function App () {
   const [data, setData] = useState(null)
   const [timeoutId, setTimeoutId] = useState(null)
   useEffect(() => {
     socket.on('data', (newData) => {
-      console.log('Hola desde gateGay')
       setData(newData)
 
       if (timeoutId) {
@@ -17,7 +15,7 @@ function App () {
       }
       const newTimeoutId = setTimeout(() => {
         setData(null)
-      }, 40000) // 60000 ms = 1 minute
+      }, 40000)
       setTimeoutId(newTimeoutId)
     })
 
