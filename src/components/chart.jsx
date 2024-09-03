@@ -1,12 +1,12 @@
 import React from 'react'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Label } from 'recharts'
-const PowerTriangleChart = ({ data }) => {
-  const { potenciaP, reactivaQ } = data
-  console.log(data)
+const PowerTriangleChart = ({ activa, reactiva }) => {
+//   const { potenciaP, reactivaQ } = data
+//   console.log(data)
   // Calcula los puntos del triángulo
   const puntos = [
     { name: 'P', x: 0, y: 0 },
-    { name: 'Q', x: potenciaP, y: reactivaQ }
+    { name: 'Q', x: activa, y: reactiva }
   ]
 
   return (
