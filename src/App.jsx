@@ -6,17 +6,18 @@ import { mdiContentSaveAll, mdiHistory, mdiSineWave } from '@mdi/js'
 import PowerTriangleChart from './components/chart'
 import { HistoryMetering } from './components/HistoryMetering'
 import 'react-toastify/dist/ReactToastify.css'
+import 'leaflet/dist/leaflet.css'
 import { toast, ToastContainer } from 'react-toastify'
 
 const socket = io('http://192.168.1.15:8081')
 function App () {
-  // const [data, setData] = useState(null)
-  const [data, setData] = useState({
-    potenciaP: 150,
-    reactivaQ: 20,
-    aparenteS: 107.703,
-    factorPotencia: 1
-  })
+  const [data, setData] = useState(null)
+  // const [data, setData] = useState({
+  //   potenciaP: 150,
+  //   reactivaQ: 20,
+  //   aparenteS: 107.703,
+  //   factorPotencia: 1
+  // })
   const [timeoutId, setTimeoutId] = useState(null)
   const [meteringView, setMeteringView] = useState(true)
   const [location, setLocation] = useState({ latitude: null, longitude: null })

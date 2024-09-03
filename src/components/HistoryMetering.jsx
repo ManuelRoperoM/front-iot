@@ -3,6 +3,7 @@ import { Table, Button } from 'react-bootstrap'
 import Icon from '@mdi/react'
 import { mdiEye } from '@mdi/js'
 import PowerTriangleChart from './chart'
+import { MapMetering } from './MapMetering'
 // import 'bootstrap/dist/css/bootstrap.min.css'
 export const HistoryMetering = () => {
   const [data, setData] = useState(null)
@@ -80,14 +81,12 @@ export const HistoryMetering = () => {
             </div>
             <div className='custom-modal-body'>
               <div className='custom-modal-body-info'>
-                <p><strong>Activa:</strong> {selectedMetering.activa}</p>
-                <p><strong>Reactiva:</strong> {selectedMetering.reactiva}</p>
-                <p><strong>Aparente:</strong> {selectedMetering.aparente}</p>
+                <p><strong>Activa:</strong> {selectedMetering.activa} W</p>
+                <p><strong>Reactiva:</strong> {selectedMetering.reactiva} VAR</p>
+                <p><strong>Aparente:</strong> {selectedMetering.aparente} VA</p>
                 <p><strong>FP:</strong> {selectedMetering.fp}</p>
                 <p><strong>Hora:</strong> {selectedMetering.hora}</p>
                 <p><strong>Fecha:</strong> {selectedMetering.fecha}</p>
-                <p><strong>Latitud:</strong> {selectedMetering.latitude}</p>
-                <p><strong>Longitud:</strong> {selectedMetering.longitude}</p>
               </div>
               <div className='custom-modal-body-grafica'>
                 <PowerTriangleChart
@@ -96,7 +95,17 @@ export const HistoryMetering = () => {
                 />
               </div>
             </div>
-            <div className='custom-modal-map' />
+            {(selectedMetering.latitude != null && selectedMetering.longitude != null)
+              ? (
+                <div className='custom-modal-map'>
+                  <MapMetering latitude={selectedMetering.latitude} longitude={selectedMetering.longitude} />
+                </div>
+                )
+              : (
+                <div className='custom-modal-map'>
+                  <p>No hay ubicación disponible</p>
+                </div>
+                )}
           </div>
         </div>
       )}
