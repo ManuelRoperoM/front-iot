@@ -11,7 +11,7 @@ export const HistoryMetering = () => {
   const [error, setError] = useState(null)
   const [selectedMetering, setSelectedMetering] = useState(null)
   useEffect(() => {
-    fetch('http://192.168.1.15:8081/random-data/all-meterings')
+    fetch(import.meta.env.VITE_API_HISTORIC)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Error en la solicitud')
