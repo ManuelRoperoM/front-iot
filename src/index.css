@@ -1,0 +1,66 @@
+/* .metering{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+} */
+
+.metering{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.metering .data{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0px;
+    width: 100%;
+}
+
+.metering .data .info{
+    display: flex;
+
+    flex-direction: column;
+    gap: 20px;
+}
+
+.metering .data .grafica{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 320px;
+    padding: 12px;;
+    border-radius: 10px;
+}
+
+.metering button{
+    width: 100px;
+    border-radius: 20px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header .header__buttons{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.header button{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    height: 40px;
+    width: 120px;
+    padding: 0px;
+}
