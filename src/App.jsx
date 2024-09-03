@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import 'leaflet/dist/leaflet.css'
 import { toast, ToastContainer } from 'react-toastify'
 
-const socket = io('http://192.168.1.15:8081')
+const socket = io(import.meta.env.VITE_SOCKET_URL)
 function App () {
   // const [data, setData] = useState(null)
   const [data, setData] = useState({
@@ -126,7 +126,7 @@ function App () {
         longitude: location.longitude
       }
       // Enviar informacion
-      const res = await fetch('http://192.168.1.15:8081/random-data/save-metering', {
+      const res = await fetch(import.meta.env.VITE_API_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
