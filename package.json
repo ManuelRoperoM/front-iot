@@ -10,8 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mdi/js": "^7.4.47",
+    "@mdi/react": "^1.6.1",
+    "bootstrap": "^5.3.3",
+    "chart.js": "^4.4.4",
+    "leaflet": "^1.9.4",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.4",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1",
+    "react-toastify": "^10.0.5",
+    "recharts": "^2.12.7",
     "socket.io-client": "^4.7.5"
   },
   "devDependencies": {

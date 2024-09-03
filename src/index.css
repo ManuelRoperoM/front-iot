@@ -1,0 +1,209 @@
+/* .metering{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+} */
+
+.metering{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.metering .data{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0px;
+    width: 100%;
+}
+
+.metering .data .info{
+    display: flex;
+
+    flex-direction: column;
+    gap: 20px;
+}
+
+.metering .data .grafica{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 320px;
+    padding: 12px;;
+    border-radius: 10px;
+}
+
+.metering button{
+    width: 100px;
+    border-radius: 20px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header .header__buttons{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.header button{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    height: 40px;
+    width: 120px;
+    padding: 0px;
+}
+
+
+/* Overlay */
+.custom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: fit-content;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+  }
+  
+  /* Modal */
+  .custom-modal {
+    background: white;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* Header */
+  .custom-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .custom-modal-header h2 {
+    margin: 0;
+  }
+  
+  .custom-close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Body */
+
+  .custom-modal-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .custom-modal-body p {
+    margin: 10px 0;
+  }
+  
+  /* Footer */
+  .custom-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+  }
+
+  
+  /*Textos */
+
+  .custom-modal-overlay h2{
+    color: var(--background-body);
+  }
+
+  .custom-modal-overlay button{
+    background-color: var(--background-body);
+  }
+
+  .custom-modal-overlay p strong{
+    color: var(--background);
+  }
+
+  .custom-modal-overlay p{
+    color: var(--background-alt);
+  }
+
+  .custom-modal-body-grafica{
+    width: 200px;
+    height: 200px;
+  }
+
+
+  /* Vista tablet */
+
+  @media only screen and (max-width: 720px) {
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: justify;
+      margin-bottom: 25px;
+    }
+    .data {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    Table Button {
+      background-color: transparent;
+      outline: none;
+      padding: 0px;
+      margin-left: 20%;
+    }
+  }
+
+  /* vista celular */
+
+  @media only screen and (max-width: 627px) {
+    Table th{
+      font-size: 12px;
+    }
+    table td{
+      font-size: 11px;
+    }
+  }
+
+
+  /* celular peque */
+
+  @media only screen and (max-width: 493px) {
+    Table {
+      width: 100%;
+    }
+    Table th{
+      font-size: 9px;
+    }
+    table td{
+      font-size: 9px;
+    }
+  }
