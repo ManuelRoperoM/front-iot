@@ -11,13 +11,13 @@ import { toast, ToastContainer } from 'react-toastify'
 
 const socket = io(import.meta.env.VITE_SOCKET_URL)
 function App () {
-  // const [data, setData] = useState(null)
-  const [data, setData] = useState({
-    potenciaP: 150,
-    reactivaQ: 20,
-    aparenteS: 107.703,
-    factorPotencia: 1
-  })
+  const [data, setData] = useState(null)
+  // const [data, setData] = useState({
+  //   potenciaP: 150,
+  //   reactivaQ: 20,
+  //   aparenteS: 107.703,
+  //   factorPotencia: 1
+  // })
   const [timeoutId, setTimeoutId] = useState(null)
   const [meteringView, setMeteringView] = useState(true)
   const [location, setLocation] = useState({ latitude: null, longitude: null })
